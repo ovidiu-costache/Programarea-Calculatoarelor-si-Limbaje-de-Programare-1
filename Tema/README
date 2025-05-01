@@ -1,0 +1,88 @@
+Nume: Costache
+Prenume: Ovidiu-Ștefan
+Grupa: 313CC
+Timp de lucru: Am rezolvat tema pe parcursul a 5 zile
+
+Programul implementeaza mai multe cerinte legate de distribuirea, sortarea si
+calcularea diferitelor informatii pentru pachetele trimise postasilor. Codul
+este impartit in mai multe functii, fiecare fiind importanta pentru generarea 
+raspunsului corect.
+
+1. Structuri de date:
+    Cartier: reprezinta cartierele dintr-un oras;
+    Pachet: reprezinta pachetele, continand informatii despre adresa de
+            livrare, prioritate, greutate si mesajul asociat;
+    Postas: reprezinta un postas care poate livra mai multe pachete, fiecare
+            avand un numar de pachete si un vector cu ID-urile pachetelor ce 
+            trebuie livrate;
+2. Citirea datelor (functia citireDate):
+    Citeste datele de intrare pentru cartiere si pachete;
+    Foloseste fgets pentru a permite citirea de linii cu spatii. Dupa fiecare
+       citire cu fgets, este sters caracterul newline;
+3. Cerinta 1 (functia cerinta_1):
+    Afiseaza informatii despre cartiere si pachete;
+4. Functia transformare:
+    Converteste un vector de numere binare intr-un numar intreg. Este folosita
+    pentru a extrage informatii din adresa pachetului;
+5. Extragerea informatiilor din adresa pachetului (functia extragere):
+    Imparte adresa (contine 18 valori) in 3 parti:
+        Cartierul - primele 5 valori;
+        Strada - urmatoarele 5 valori;
+        Numarul - ultimele 8 valori;
+    Fiecare parte este convertita folosind functia transformare;
+6. Cerinta 2 (functia cerinta_2):
+    Afiseaza cartierul, strada si numarul pentru fiecare pachet;
+7. Distribuirea pachetelor catre postasi (functia distribuirePachete):
+    In functie de cartierul fiecarui pachet, pachetele sunt distribuite
+    catre postasii corespunzatori, actualizand numarul de pachete si lista
+    de pachete pentru fiecare postas;
+8. Sortarea pachetelor (functia sorteazPachete):
+    Sorteaza pachetele pentru fiecare postas in functie de prioritate si, in 
+    caz de egalitate, in functie de greutate.
+9. Afisarea postasilor (functia afisarePostasi):
+    Afiseaza ID-ul si numarul de pachete al fiecarui postas, impreuna cu 
+    ID-urile pachetelor pe care le livreaza;
+10. Cerinta 3 (functia cerinta_3):
+    Extrage informatii cu privire la adresa de livrare a pachetelor, le
+    distribuie postasilor corespunzatori, iar ulterior, postasii sunt 
+    afisati impreuna cu pachetele ce trebuie livrate;
+11. Cerinta 4 (functia cerinta_4):
+    Extrage adresa de livrare a pachetelor, le distribuie postasilor,
+    sunt sortate in functie de prioritate si de greutate, iar in final 
+    sunt afisati postasii impreuna cu pachetele ce trebuie distribuite;
+12. Inversarea mesajului (functia inversareMesaj):
+    Inverseaza cuvintele din mesajul fiecarui pachet, indepartand semnele
+    de punctuatie. Foloseste strtok pentru a imparti mesajul in cuvinte 
+    si le stocheaza intr-o matrice pentru a le inversa;
+13. Calcularea codului mesajului (functia calculareCod):
+    Calculeaza un cod pentru fiecare mesaj in functie de valorile ASCII ale 
+    caracterelor;
+14. Afisarea postasilor cu codul mesajului (functia afisarePostasiCod):
+    Afiseaza postasii, ID-urile pachetelor pe care le livreaza si codul asociat
+    fiecarui pachet;
+15. Cerinta 5 (functia cerinta_5):
+    Distribuie pachetele, le sorteaza, extrage adresa, inverseaza mesajele,
+    calculeaza codul mesajului si afiseaza postasii, pachetul si codul 
+    calculat;
+16. Verificare daca codul mesajului contine cifre din ID-ul postasului
+    (functia contineCifra):
+    Verifica daca cel putin una dintre cifrele ID-ului postasului este prezenta
+    in codul mesajului;
+17. Calcularea factorilor primi (functia factoriPrimi):
+    Calculeaza factorii primi ai ID-ului postasului;
+18. Afisarea codului alterat (functia afisareCodAlterat):
+    Daca codul mesajului contine cifrele ID-ului postasului, altereaza
+    codul folosind factorii primi ai ID-ului;
+19. Cerinta 6 (functia cerinta_6):
+    Distribuie pachetele postasilor, le sorteaza, extrage informatiile
+    aferente adresei de livrare, inverseaza mesajul, apoi calculeaza codul
+    acestuia si afiseaza postasii impreuna cu pachetele si codul acestora;
+20. Afisarea scorului (functia afisareScor):
+    Calculeaza si afiseaza procentul de pachete distribuite corect, adica
+    pachetele al caror cod a fost alterat corect;
+21. Cerinta 7 (functia cerinta_7):
+    Distribuie pachetele postasilor, le sorteaza, extrage adresa, caluleaza
+    si altereaza codurile, apoi afiseaza scorul pentru fiecare postas;
+22. Functia principala (main):
+    Citeste cerinta si datele de intrare, apoi apeleaza functiile
+    corespunzatoare pe baza cerintei date;
